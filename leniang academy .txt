@@ -1,0 +1,886 @@
+<!-- LENIANG ACADEMY - Landing Page Ultra Professionnelle -->
+<!-- Version Premium avec toutes les sections de conversion -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+
+<style>
+  /* Reset & Base */
+  .leniang-landing * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .leniang-landing {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  /* Hero Section Ultra Premium */
+  .leniang-hero-premium {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    overflow: hidden;
+    padding: 60px 20px;
+  }
+
+  /* Particules animées en arrière-plan */
+  .leniang-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .leniang-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #8B5CF6;
+    border-radius: 50%;
+    animation: float 15s infinite ease-in-out;
+    opacity: 0.3;
+  }
+
+  .leniang-particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .leniang-particle:nth-child(2) { left: 20%; animation-delay: 2s; }
+  .leniang-particle:nth-child(3) { left: 30%; animation-delay: 4s; }
+  .leniang-particle:nth-child(4) { left: 40%; animation-delay: 1s; }
+  .leniang-particle:nth-child(5) { left: 50%; animation-delay: 3s; }
+  .leniang-particle:nth-child(6) { left: 60%; animation-delay: 5s; }
+  .leniang-particle:nth-child(7) { left: 70%; animation-delay: 2s; }
+  .leniang-particle:nth-child(8) { left: 80%; animation-delay: 4s; }
+  .leniang-particle:nth-child(9) { left: 90%; animation-delay: 1s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-100px) translateX(50px); }
+    50% { transform: translateY(-200px) translateX(-50px); }
+    75% { transform: translateY(-150px) translateX(30px); }
+  }
+
+  .leniang-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+  }
+
+  /* Badge Premium */
+  .leniang-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(99, 102, 241, 0.2));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .leniang-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    animation: blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* Titre Hero Ultra Impact */
+  .leniang-hero-title-mega {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #fff 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slideDown 1s ease-out;
+  }
+
+  .leniang-hero-subtitle-mega {
+    font-size: 22px;
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    animation: slideUp 1s ease-out 0.2s backwards;
+  }
+
+  /* Stats Row Premium */
+  .leniang-stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+    animation: slideUp 1s ease-out 0.4s backwards;
+  }
+
+  .leniang-stat-item {
+    text-align: center;
+  }
+
+  .leniang-stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #8B5CF6;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .leniang-stat-label {
+    font-size: 14px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* CTA Premium avec effet glow */
+  .leniang-cta-mega {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%);
+    color: #fff;
+    padding: 22px 60px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.5);
+    transition: all 0.4s ease;
+    animation: slideUp 1s ease-out 0.6s backwards;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .leniang-cta-mega::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .leniang-cta-mega:hover::before {
+    left: 100%;
+  }
+
+  .leniang-cta-mega:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 80px rgba(139, 92, 246, 0.7);
+    color: #fff;
+  }
+
+  /* Trust Indicators */
+  .leniang-trust-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    animation: slideUp 1s ease-out 0.8s backwards;
+  }
+
+  .leniang-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #888;
+  }
+
+  .leniang-trust-icon {
+    font-size: 20px;
+    color: #00ff88;
+  }
+
+  /* Social Proof Section */
+  .leniang-social-proof {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+  }
+
+  .leniang-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .leniang-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .leniang-section-tag {
+    display: inline-block;
+    color: #8B5CF6;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .leniang-section-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .leniang-section-subtitle {
+    font-size: 18px;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* Testimonial Carousel Premium */
+  .leniang-testimonial-showcase {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 32px;
+    padding: 60px;
+    margin: 40px auto;
+    max-width: 1000px;
+    border: 1px solid #8B5CF6;
+    box-shadow: 0 30px 100px rgba(139, 92, 246, 0.3);
+  }
+
+  .leniang-testimonial-mega {
+    text-align: center;
+  }
+
+  .leniang-testimonial-image-mega {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+
+  .leniang-testimonial-stats-mega {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+  }
+
+  .leniang-stat-mega {
+    background: rgba(0,0,0,0.4);
+    padding: 25px 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+  }
+
+  .leniang-stat-mega-number {
+    font-size: 42px;
+    font-weight: 900;
+    color: #8B5CF6;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .leniang-stat-mega-label {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .leniang-testimonial-quote {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ddd;
+    font-style: italic;
+    margin: 30px 0;
+    padding: 30px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    border-left: 4px solid #8B5CF6;
+  }
+
+  .leniang-testimonial-author {
+    font-size: 18px;
+    font-weight: 700;
+    color: #8B5CF6;
+    margin-top: 20px;
+  }
+
+  /* Features Grid Ultra Pro */
+  .leniang-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+  }
+
+  .leniang-feature-card-pro {
+    background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+    border: 1px solid #222;
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .leniang-feature-card-pro::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .leniang-feature-card-pro:hover::before {
+    opacity: 1;
+  }
+
+  .leniang-feature-card-pro:hover {
+    border-color: #8B5CF6;
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(139, 92, 246, 0.3);
+  }
+
+  .leniang-feature-icon-pro {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .leniang-feature-title-pro {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+
+  .leniang-feature-desc-pro {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #888;
+  }
+
+  /* Timeline/Process Section */
+  .leniang-process-section {
+    padding: 100px 20px;
+    background: #0a0a0a;
+  }
+
+  .leniang-process-timeline {
+    max-width: 800px;
+    margin: 60px auto 0;
+    position: relative;
+  }
+
+  .leniang-process-line {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #8B5CF6, transparent);
+  }
+
+  .leniang-process-step {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .leniang-step-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 900;
+    flex-shrink: 0;
+    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.5);
+    position: relative;
+    z-index: 2;
+  }
+
+  .leniang-step-content {
+    flex: 1;
+    padding-top: 10px;
+  }
+
+  .leniang-step-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+
+  .leniang-step-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #888;
+  }
+
+  /* Pricing Section Premium */
+  .leniang-pricing-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+  }
+
+  .leniang-pricing-card-premium {
+    max-width: 600px;
+    margin: 60px auto 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 2px solid #8B5CF6;
+    border-radius: 32px;
+    padding: 60px;
+    box-shadow: 0 40px 120px rgba(139, 92, 246, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .leniang-pricing-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .leniang-pricing-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .leniang-pricing-badge-premium {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+
+  .leniang-pricing-amount {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .leniang-old-price-mega {
+    font-size: 32px;
+    color: #666;
+    text-decoration: line-through;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .leniang-current-price-mega {
+    font-size: 72px;
+    font-weight: 900;
+    color: #8B5CF6;
+    display: block;
+    line-height: 1;
+  }
+
+  .leniang-price-currency {
+    font-size: 32px;
+    vertical-align: super;
+  }
+
+  /* Benefits Checklist Premium */
+  .leniang-benefits-checklist {
+    margin: 40px 0;
+  }
+
+  .leniang-benefit-check {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 16px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .leniang-benefit-check:hover {
+    border-color: #8B5CF6;
+    background: rgba(139, 92, 246, 0.1);
+    transform: translateX(5px);
+  }
+
+  .leniang-check-circle {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .leniang-benefit-text-pro {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+  }
+
+  /* FAQ Section */
+  .leniang-faq-section {
+    padding: 100px 20px;
+    background: #0a0a0a;
+  }
+
+  .leniang-faq-container {
+    max-width: 800px;
+    margin: 60px auto 0;
+  }
+
+  .leniang-faq-item {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .leniang-faq-item:hover {
+    border-color: #8B5CF6;
+    background: #151515;
+  }
+
+  .leniang-faq-question {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .leniang-faq-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .leniang-faq-answer {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #888;
+  }
+
+  /* Final CTA Section */
+  .leniang-final-cta {
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #1a1a2e, #0a0a0a);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .leniang-final-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  }
+
+  .leniang-final-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .leniang-final-title {
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+
+  .leniang-final-subtitle {
+    font-size: 20px;
+    color: #aaa;
+    margin-bottom: 50px;
+    line-height: 1.8;
+  }
+
+  /* Footer Premium */
+  .leniang-footer-premium {
+    background: #000;
+    padding: 60px 20px 30px;
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .leniang-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .leniang-footer-logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #8B5CF6;
+    margin-bottom: 20px;
+  }
+
+  .leniang-footer-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .leniang-footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .leniang-footer-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .leniang-footer-link:hover {
+    color: #8B5CF6;
+  }
+
+  .leniang-footer-copyright {
+    font-size: 13px;
+    color: #444;
+    padding-top: 30px;
+    border-top: 1px solid #1a1a1a;
+  }
+
+  /* Animations */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .leniang-hero-title-mega {
+      font-size: 42px;
+    }
+
+    .leniang-hero-subtitle-mega {
+      font-size: 18px;
+    }
+
+    .leniang-section-title {
+      font-size: 36px;
+    }
+
+    .leniang-cta-mega {
+      padding: 18px 40px;
+      font-size: 18px;
+    }
+
+    .leniang-testimonial-showcase,
+    .leniang-pricing-card-premium {
+      padding: 40px 30px;
+    }
+
+    .leniang-current-price-mega {
+      font-size: 56px;
+    }
+
+    .leniang-final-title {
+      font-size: 36px;
+    }
+
+    .leniang-stat-number {
+      font-size: 36px;
+    }
+
+    .leniang-stats-row {
+      gap: 20px;
+    }
+  }
+</style>
+
+<div class="leniang-landing">
+
+  <!-- Hero Section Premium -->
+  <section class="leniang-hero-premium">
+    <div class="leniang-particles">
+      <div class="leniang-particle"></div>
+      <div class="leniang-particle"></div>
+      <div class="leniang-particle"></div>
+      <div class="leniang-particle"></div>
+      <div class="leniang-particle"></div>
+      <div class="leniang-particle"></div>
+      <div class="leniang-particle"></div>
+      <div class="leniang-particle"></div>
+      <div class="leniang-particle"></div>
+    </div>
+
+    <div class="leniang-hero-content">
+      <div class="leniang-badge">
+        <span class="leniang-badge-dot"></span>
+        <span>+2 500 élèves formés en 2025</span>
+      </div>
+
+      <h1 class="leniang-hero-title-mega">
+        Transforme ton<br/>téléphone en<br/><span style="color: #8B5CF6;">machine à cash</span>
+      </h1>
+
+      <p class="leniang-hero-subtitle-mega">
+        La méthode complète et prouvée pour générer tes premiers<br/>revenus en ligne dès aujourd'hui - même sans expérience
+      </p>
+
+      <div class="leniang-stats-row">
+        <div class="leniang-stat-item">
+          <span class="leniang-stat-number">2,500+</span>
+          <span class="leniang-stat-label">Élèves actifs</span>
+        </div>
+        <div class="leniang-stat-item">
+          <span class="leniang-stat-number">4.9/5</span>
+          <span class="leniang-stat-label">Satisfaction</span>
+        </div>
+        <div class="leniang-stat-item">
+          <span class="leniang-stat-number">180K</span>
+          <span class="leniang-stat-label">Record en 7 jours</span>
+        </div>
+      </div>
+
+      <a href="https://leniang.mychariow.shop/prd_dpznlr/checkout" class="leniang-cta-mega">
+        <span>Commencer maintenant</span>
+        <span>→</span>
+      </a>
+
+      <div class="leniang-trust-bar">
+        <div class="leniang-trust-item">
+          <span class="leniang-trust-icon">✓</span>
+          <span>Accès immédiat</span>
+        </div>
+        <div class="leniang-trust-item">
+          <span class="leniang-trust-icon">✓</span>
+          <span>Paiement sécurisé</span>
+        </div>
+        <div class="leniang-trust-item">
+          <span class="leniang-trust-icon">✓</span>
+          <span>Support 7j/7</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Section -->
+  <section class="leniang-social-proof">
+    <div class="leniang-container">
+      <div class="leniang-section-header">
+        <span class="leniang-section-tag">✨ Résultats réels</span>
+        <h2 class="leniang-section-title">Ils l'ont fait, pourquoi pas toi ?</h2>
+        <p class="leniang-section-subtitle">
+          Des résultats concrets de nos élèves qui ont transformé leur vie grâce à LENIANG ACADEMY
+        </p>
+      </div>
+
+      <div class="leniang-testimonial-showcase">
+        <img src="VOTRE_URL_IMAGE_ICI" alt="Success Story" class="leniang-testimonial-image-mega"/>
+        
+        <div class="leniang-testimonial-stats-mega">
+          <div class="leniang-stat-mega">
+            <span class="leniang-stat-mega-number">180K</span>
+            <span class="leniang-stat-mega-label">FCFA en 7 jours</span>
+          </div>
+          <div class="leniang-stat-mega">
+            <span class="leniang-stat-mega-number">8</span>
+            <span class="leniang-stat-mega-label">Produits vendus</span>
+          </div>
+        </div>
+
+        <div class="leniang-testimonial-quote">
+          "J'ai suivi les méthodes exacte
